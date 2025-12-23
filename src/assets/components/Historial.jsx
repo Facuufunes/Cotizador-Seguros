@@ -1,6 +1,15 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 const Historial = () => {
-  // Podés traer el historial desde localStorage o un estado global
-  const historial = JSON.parse(localStorage.getItem("historial") || "[]");
+  const [historial, setHistorial] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem("historial") || "[]");
+    setHistorial(stored);
+  }, []);
 
   return (
     <div className="app">
@@ -11,11 +20,14 @@ const Historial = () => {
         <ul>
           {historial.map((item, i) => (
             <li key={i}>
-              {item.fecha}: {item.detalle} - ${item.monto}
+              {item.fecha} - {item.property} ({item.meters} m²) - Precio estimado: ${item.precio}
             </li>
           ))}
         </ul>
       )}
+      <button className="btn-volver" onClick={() => navigate("/")}>
+        Volver al inicio
+      </button>
     </div>
   );
 };
