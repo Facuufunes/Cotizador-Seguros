@@ -1,4 +1,4 @@
-Proyecto Final React – Cotizador de Seguros 🏠
+## Proyecto Final React – Cotizador de Seguros 🏠
 
 Proyecto realizado como trabajo final (UNTREF).
 La aplicación simula un cotizador de seguros del hogar, permitiendo ingresar datos del usuario y de la propiedad para obtener distintas opciones de cobertura y costos.
