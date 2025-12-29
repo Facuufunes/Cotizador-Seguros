@@ -43,7 +43,7 @@ Botones estilizados
 
 Navegación clara entre secciones
 
-🧩 ## Estructura del proyecto
+## 🧩  Estructura del proyecto
 
 Componentes reutilizables (InsuranceForm, Resultado, CoverageOptions, Historial)
 
